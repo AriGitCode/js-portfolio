@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/dff122a35c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+    <!-- <video src="./images/bg-universe.mp4" autoplay muted loop type="video/mp4"></video>    -->
+    <div class="container">
+      <nav>
+        <img src="./images/a.png" class="logo">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Color</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-text">
+        <p>Hello, World!</p>
+        <h1><span class="auto-text">AIDANA TURMETOVA</span></h1>
+        <p>a Web Developer</p>
+        <a href="#" class="btn">Resume</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <div id="about">
+    <div class="container">
+        <div class="row">
+            <div id="lottie-animation"></div>
+            <div class="about-col-2">
+                <h2 class="sub-title">About Me</h2>
+                <p>I am a Front-End Developer. I have a passion for creating beautiful and intuitive websites. I am always looking for new and exciting projects to work on.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023 - Current</span><br>Front-End Developer</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>General Assembly</span><br>Software Engineer</li>
+                        <li><span>Masters Degree</span><br>Cultural Education</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------------services---------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+              <i class="fa-solid fa-code"></i>
+              <h3>Web Development</h3>
+              <p>HTML5 | CSS3 | JAVASCRIPT| BOOTSTRAP | REACT | NODE.JS | MONGODB | GIT | GITHUB | PYTHON | DJANGO |</p>
+              <a href="#">Learn more</a>
+            </div>
+            <div>
+              <i class="fa-solid fa-crop-simple"></i>
+              <h3>UI Design</h3>
+              <p>FIGMA | UI/UX | ADOBE XD | PHOTOSHOP |</p>
+              <a href="#">Learn more</a>
+            </div>
+            <div>
+              <i class="fa-solid fa-eye"></i>
+              <h3>Dreamer</h3>
+              <p></p>
+              <a href="#">Learn more</a>
+            </div>
+        </div>          
+    </div>
+</div>
+<!-----------------projects---------------->
+<div id="projects">
+    <div class="container">
+        <h4 class="sub-title">My Projects</h4>
+    </div>
+
+</div>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
