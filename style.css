@@ -1,3 +1,5 @@
+
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:400,700);
 *{
   margin: 0;
   padding: 0;
@@ -6,7 +8,7 @@
 }
 
 body{
-  background: #402d84;
+  background:linear-gradient(rgba(0,0,0,0.6), #653d8a);
   color: #fff; 
 }
 
@@ -120,6 +122,11 @@ nav ul li a:hover::after{
   font-size: 20px;
   margin: 20px 0;
   cursor: pointer;
+}
+
+.btn:hover{
+  transform: scale(1.2);
+  background-color: #ff004f;
 }
 /* -------------about----------------- */
 #about{
@@ -300,7 +307,7 @@ nav ul li a:hover::after{
   text-decoration: none;
   font-size: 18px;
   line-height: 60px;
-  background: #fff;
+  background: beige;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -319,20 +326,95 @@ nav ul li a:hover::after{
 
 /* --------------contact----------------- */
 .contact-text{
-  flex-basis: 60%;
+  flex-basis: 35%;
 }
 
 .contact-form{
-  flex-basis: 40%;
+  flex-basis: 60%;
 }
 
 .contact-text p{
   margin-top: 30px;
 }
 
+.contact-text p i{
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
 
+.social-icons{
+  margin-top: 30px;
+}
 
+.social-icons a{
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
 
+.social-icons a:hover{
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+
+.contact-form form{
+  width: 100%;
+
+}
+
+form input, form textarea{
+  width: 100%;
+  border:0;
+  outline: none;
+  background: #ababab2d;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+form .btn2{
+  background: transparent;
+  border: #fff 1px solid;
+  color: antiquewhite;
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+form .btn2:hover{
+  background: #ff004f; /*#Change it*/
+  border: none;
+}
+
+/* --------------footer----------------- */
+.copyright{
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #34103d;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+/* --------------media query----------------- */
+@media only screen and (max-width: 600px){
+  #header-text{
+    margin-top: 10%;
+    font-size: 16px;
+  }
+
+  .header-text h1{
+    font-size: 30px;
+  }
+
+}
     /* --background: #060708;
     --background-dim: #08090a;
     --background-dim2: #0e0f11;
