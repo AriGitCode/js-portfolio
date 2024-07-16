@@ -13,21 +13,21 @@
     <div class="container">
       <nav>
         <img src="./images/a.png" class="logo">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
           <li><a href="#">Color</a></li>
-          <i class="fa-solid fa-xmark"></i>
+          <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
         </ul>
-        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
       </nav>
 
       <div class="header-text">
         <p>Hello, World!</p>
         <h1><span class="auto-text">AIDANA TURMETOVA</span></h1>
-        <p>a Web Developer</p>
+        <p>I am a <span class="multi-text"></span></p>
         <a href="images/Aidana FD.pdf" download class="btn">Resume</a>
       </div>
     </div>
@@ -40,7 +40,8 @@
             <div id="lottie-animation"></div>
             <div class="about-col-2">
                 <h2 class="sub-title">About Me</h2>
-                <p>I am a Front-End Developer. I have a passion for creating beautiful and intuitive websites. I am always looking for new and exciting projects to work on.</p>
+                <p>I am a Front-End Developer. I have a passion for creating beautiful and intuitive websites.
+                   I am always looking for new and exciting projects to work on.</p>
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
                     <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
@@ -80,7 +81,7 @@
             </div>
             <div>
               <i class="fa-solid fa-crop-simple"></i>
-              <h3>UI Design</h3>
+              <h3>Web Design</h3>
               <p>FIGMA | UI/UX | ADOBE XD | PHOTOSHOP |</p>
               <a href="#">Learn more</a>
             </div>
@@ -173,7 +174,7 @@
         <div class="row">
             <div class="contact-text">
                 <h1 class="sub-title">Contact Me</h1>
-                <p> aidanaturmetova@gmail.com</p>
+                <p><i class="fa-solid fa-envelope-circle-check"></i> aidanaturmetova@gmail.com</p>
                 <div class="social-icons">
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/aidana-turmetova/"><i class="fa-brands fa-linkedin"></i></a>
@@ -201,6 +202,11 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js"></script>
+  <!-----Email.js-->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-----typed.js-->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <!----- Main JS-->
   <script src="script.js"></script>
 </body>
 </html>

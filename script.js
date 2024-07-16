@@ -21,9 +21,31 @@ document.addEventListener('DOMContentLoaded', function() {
       event.currentTarget.classList.add("active-link");
       document.getElementById(tabname).classList.add("active-tab");
   }
+
+  let sidemenu =document.getElementById("sidemenu");
+
+  function openmenu(){
+     sidemenu.style.right="0";
+  }
+  function closemenu(){
+    sidemenu.style.right="-200px";
+ }
+  
+//Typed.js//
+const typed = new Typed('.multi-text', {
+  strings: ['Developer', 'Designer', 'Freelancer'],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true
+})
   
 
-  
+//  EMAIL.JS   //
+const contactForm = document.getElementById('contact-form');
+
+
+
 
 
 
