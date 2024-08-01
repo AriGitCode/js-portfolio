@@ -6,10 +6,15 @@
   <title>Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/dff122a35c.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
+  rel="stylesheet">
 </head>
 <body>
-  <div id="header">
-    <!-- <video src="./images/bg-universe.mp4" autoplay muted loop type="video/mp4"></video>    -->
+  <div id="header"> 
+    <!-- <video src="./images/orange.mp4" autoplay muted loop type="bg-video"></video>   -->
     <div class="container">
       <nav>
         <img src="./images/a.png" class="logo">
@@ -23,11 +28,10 @@
         </ul>
         <i class="fa-solid fa-bars" onclick="openmenu()"></i>
       </nav>
-
       <div class="header-text">
-        <p>Hello, World!</p>
+        <p class="hello">Hello, World!</p>
         <h1><span class="auto-text">AIDANA TURMETOVA</span></h1>
-        <p>I am a <span class="multi-text"></span></p>
+        <p class="multi">I am a <span class="multi-text"></span></p>
         <a href="images/Aidana FD.pdf" download class="btn">Resume</a>
       </div>
     </div>
@@ -167,30 +171,33 @@
           </div> -->
         </div>
     </div>
-    <!-----------------contact---------------->
-</div>
+</div>    
+<!-----------------contact---------------->
 <div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-text">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-envelope-circle-check"></i> aidanaturmetova@gmail.com</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/aidana-turmetova/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/AriGitCode"><i class="fa-brands fa-github"></i></a>
-                </div>
-            </div>
-            <div class="contact-form">
-                <form>
-                  <input type="text" name="Name" placeholder="Your name" required>
-                  <input type="email" name="email" placeholder="Your email" required>
-                  <textarea name="message" row="6" placeholder="Write me something nice :)"></textarea>
-                  <button type="submit" class="btn2"><i class="fa-solid fa-paper-plane"></i></button>
-                </form>
-            </div>
-        </div>
-    </div> 
+  <div class="container">
+      <div class="row">
+          <div class="contact-text">
+              <h1 class="sub-title">Contact Me</h1>
+              <p><i class="fa-solid fa-envelope-circle-check"></i> codesadmi@gmail.com</p>
+              <div class="social-icons">
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/aidana-turmetova/"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="https://github.com/AriGitCode"><i class="fa-brands fa-github"></i></a>
+              </div>
+          </div>
+          <div class="contact-form">
+              <form name="submit-to-google-sheet">
+                <input type="text" name="Name" id="name" placeholder="Your name" autocomplete="name" required>
+                <input type="email" name="Email" id="email" placeholder="Your email" autocomplete="email" required>
+                <textarea name="Message" id="message" rows="6" placeholder="Write me something nice :)" autocomplete="off"></textarea>
+                <button type="submit" class="btn2"><i class="fa-solid fa-paper-plane"></i></button>
+              </form>
+              <span id="msg"></span>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="copyright">
     <div class="copyright">
         <p>Copyright © 2024 Made by AIDANA TURMETOVA.</p>
     </div>

@@ -41,8 +41,29 @@ const typed = new Typed('.multi-text', {
 })
   
 
-//  EMAIL.JS   //
-const contactForm = document.getElementById('contact-form');
+//  Contact Form  //
+const scriptURL = 'https://script.google.com/macros/s/AKfycbybewJYEaIAEtVhCUCTVd5ggnBD-ho-_aISzAqMJ8CJUYlVYNcG0WqoDKuc8E_m7L9c/exec';
+const form = document.forms['submit-to-google-sheet'];
+const msg = document.getElementById("msg");
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+      msg.innerHTML = "Message sent successfully";
+      setTimeout(() => { msg.innerHTML = ""; }, 5000);
+      form.reset();
+    })
+    .catch(error => {
+      console.error('Error sending message', error.message);
+      msg.innerHTML = "Error sending message: " + error.message;
+      setTimeout(() => { msg.innerHTML = ""; }, 5000);
+    });
+});
+
 
 
 

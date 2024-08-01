@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'MuseoModerno', system-ui;
 }
 
 html{
@@ -11,24 +12,26 @@ html{
 }
 
 body{
-  background:linear-gradient(rgba(75, 84, 182, 0.6), #653d8a); /*3C3553*/
-  color: #fff; 
+  background: rgb(56,23,145);
+  color: orange; 
 }
 
 #header{
   width: 100%;
   height: 100vh;
-  /* background-image: url(./images/top-bg.svg); */
+  /* background-image: url(./images/violet.png); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url(./images/violet.png);
   background-size: cover;
-  background-position: center;
+  background-position: center; 
 }
 
 
 /* video*/
-/* #header video{
+/* .bg-video{
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -44,17 +47,9 @@ body{
   height: 100%;
   background: rgba(0, 0, 0, 0.267);  
   z-index: 1;
-} */
+} */ 
 
-/* #header h1 {
-  position: relative;
-  z-index: 2;
-  font-size: 3em;
-  background: linear-gradient(45deg, #f3ec78, #af4261);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-} */
+
 .container{
   padding: 10px 10%;
 }
@@ -79,8 +74,9 @@ nav ul li{
 nav ul li a{
   text-decoration: none;
   font-size: 18px;
+  font-weight: bolder;
   position: relative;
-  background: linear-gradient(45deg, #fff, #ca5d7c);
+  background:  orange;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -103,17 +99,31 @@ nav ul li a:hover::after{
 .header-text{
   margin-top: 10%;
   font-size: 30px;
+  text-align: center;
 }
 
 .header-text h1{
   font-size: 100px;
   margin-top: 10px;
+
 }
 
 .header-text h1 span{
-  color: #f1e60b;
+  background-image: linear-gradient(to right,#f3e226, #7be728, #f3265f, #7f40ac, #7be728);
+            animation: gradientAnimation 5s linear infinite;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+  /* color: rgb(67,87,105); */
+}
+.multi{
+  color:rgb(0,189,159);
+  font-weight: bolder;
 }
 
+.hello{
+  font-weight: bolder;
+  font-size: 15px;
+}
 .btn{
   display: inline-block;
   background: transparent;
@@ -134,7 +144,7 @@ nav ul li a:hover::after{
 /* -------------about----------------- */
 #about{
   padding: 80px 0;
-  color: #ababab;
+  color: #fff;
 }
 
 .row{
@@ -156,7 +166,7 @@ nav ul li a:hover::after{
 .sub-title{
   font-size: 60px;
   font-weight: 600;
-  color: #fff;
+  color: orangered;
 }
 
 .tab-titles{
@@ -395,8 +405,13 @@ form .btn2{
 form .btn2:hover{
   background: #ff004f; /*#Change it*/
   border: none;
+  display: block;
 }
-
+#msg{
+  color: #61b752;
+  margin-top: -40px;
+  display: block;
+}
 /* --------------footer----------------- */
 .copyright{
   width: 100%;
