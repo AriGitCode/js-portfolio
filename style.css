@@ -69,6 +69,8 @@ nav ul li{
   display: inline-block;
   list-style: none;
   margin: 10px 20px;
+  position: relative;
+  /* Necessary for absolute positioning of pseudo-elements */
 }
 
 nav ul li a{
@@ -79,7 +81,29 @@ nav ul li a{
   background:  orange;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  z-index: 0;
 }
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(45deg,#ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  border-radius: 5px; /* Adjust as needed */
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  animation: glowing 20s linear infinite;
+}
+
+nav ul li a:hover::before {
+  opacity: 1;
+}
+
 
 nav ul li a::after{
   content: '';
@@ -96,6 +120,12 @@ nav ul li a:hover::after{
   width: 100%; 
 }
 
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0   
+ 0; }
+}
 .header-text{
   margin-top: 10%;
   font-size: 30px;
@@ -116,7 +146,7 @@ nav ul li a:hover::after{
   /* color: rgb(67,87,105); */
 }
 .multi{
-  color:rgb(0,189,159);
+  color:rgb(80, 226, 67);
   font-weight: bolder;
 }
 
@@ -124,7 +154,8 @@ nav ul li a:hover::after{
   font-weight: bolder;
   font-size: 15px;
 }
-.btn{
+
+.btn {
   display: inline-block;
   background: transparent;
   border: #fff 1px solid;
@@ -135,12 +166,41 @@ nav ul li a:hover::after{
   font-size: 20px;
   margin: 20px 0;
   cursor: pointer;
+  position: relative;
+  z-index: 0;
+  overflow: visible;
+  /* Your existing button styles */
+  position: relative; /* Necessary for absolute positioning of pseudo-elements */
 }
 
-.btn:hover{
-  transform: scale(1.2);
-  background-color: #ff004f;
+.btn:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(45deg,#ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  border-radius: 6px; /* Match button border-radius */
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  animation: glowing 20s linear infinite;
 }
+
+
+.btn:hover:before {
+  opacity: 1;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
 /* -------------about----------------- */
 #about{
   padding: 80px 0;
@@ -152,13 +212,11 @@ nav ul li a:hover::after{
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
 #lottie-animation{
   flex-basis: 35%;
   width: 100%;
 }
-
-.about-col-2{
+.about-col-2 {
   flex-basis: 60%;
 
 }
@@ -257,7 +315,7 @@ nav ul li a:hover::after{
 }
 
 .services-list div:hover{
-  background: rgb(34, 249, 228);
+  background:  #7d22bd;
   transform: translateY(-10px);
 }
 /* --------------projects----------------- */
@@ -289,7 +347,7 @@ nav ul li a:hover::after{
 .layer{
   width: 100%;
   height: 0;
-  background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+  background: linear-gradient(rgba(0, 0, 0, 0.6),#e65d13, #e4e7c5, #350c72);
   border-radius: 10px;
   position: absolute;
   left: 0;
@@ -436,14 +494,18 @@ nav .fa-solid{
   .header-text h1{
     font-size: 30px;
   }
+  
+  .multi{
+    font-size: 18px;
+  }
 
   nav .fa-solid{
     display: block;
     font-size: 25px;
   }
-
+ 
   nav ul{
-    background: #ff004f;
+    background: orangered;
     position: fixed;
     top: 0;
     right: -200px;
@@ -474,6 +536,10 @@ nav .fa-solid{
     flex-basis: 100%;
   }
 
+  .my-img, .about-col-2{
+    flex-basis: 100%;
+  }
+  im
   #lottie-animation{
     margin-bottom: 30px;
   }
